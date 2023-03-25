@@ -1,0 +1,33 @@
+{% extends 'layout.html'%}
+{%block body%}
+<div class="col-md-4 offset-md-4">
+    <div class="card card-body">
+        <form action="/update/{{client.0}}" method="POST">
+          <div class="form-group">
+            <input type="text" name="fullname" placeholder="fullname" value ={{client.1}}
+            class="form-control"
+            >
+
+          </div>
+          <div class="form-group">
+            <input type="number" name="monto" placeholder="monto" value ={{client.2}}
+            class="form-control" step=any
+            >
+          </div>
+          <div class="form-group">
+            <input type="text" name="estado" placeholder="estado" value ={{client.3}} 
+            class="form-control"
+             >
+          </div>
+          <div class="form-group"></div>
+            <button type="submit"
+            class="btn btn-success btnl-block"
+            >
+             Save
+            </button>
+        </form>
+    </div>
+</div>
+
+
+{%endblock%}
